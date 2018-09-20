@@ -22,12 +22,12 @@ Web services which are not mentioned above could be implemented by create new cl
 
 # Usage
 ### Sync Callout
-```
+```Java
 RESTCalloutHandler sampleRESTCallout = new RESTCalloutHandler('https://long-running.herokuapp.com/products/1?latency=1', new SampleCalloutResponseHandler(), null, RESTCalloutHandler.GET, null);
 sampleRESTCallout.callout();
 ```
 ### Async Callout
-```
+```Java
 RESTCalloutHandler r1 = new RESTCalloutHandler('https://long-running.herokuapp.com/products/1?latency=1', new SampleCalloutResponseHandler(), null, RESTCalloutHandler.GET, null);
 RESTCalloutHandler r2 = new RESTCalloutHandler('https://long-running.herokuapp.com/products/2?latency=1', new SampleCalloutResponseHandler(), null, RESTCalloutHandler.GET, null);
 CalloutQueueable cq = new CalloutQueueable(new List<CalloutHandler>{r1, r2});
