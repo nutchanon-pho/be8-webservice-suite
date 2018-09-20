@@ -19,11 +19,15 @@ public class RESTCalloutHandler extends CalloutHandler {
         Http http = new Http();
         req.setTimeout(timeout);
         req.setEndpoint(endpoint);
-        for(String key : header.keySet()) {
-            req.setHeader(key, header.get(key));
+        if(header != null) {
+            for(String key : header.keySet()) {
+                req.setHeader(key, header.get(key));
+            }
         }
         req.setMethod(method);
-        req.setBody(body);
+        if(body != null) {
+            req.setBody(body);
+        }
         res = http.send(req);
         if(handler != null) {
             handler.handleResponse(res);

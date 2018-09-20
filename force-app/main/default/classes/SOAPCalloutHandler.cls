@@ -21,10 +21,14 @@ public class SOAPCalloutHandler extends CalloutHandler {
         req.setHeader('soapAction', soapAction);
         req.setHeader('Accept', 'text/xml');
         req.setMethod('POST');
-        for(String key : header.keySet()) {
-            req.setHeader(key, header.get(key));
+        if(header != null) {
+            for(String key : header.keySet()) {
+                req.setHeader(key, header.get(key));
+            }
         }
-        req.setBody(body);
+        if(body != null) {
+            req.setBody(body);
+        }
         res = http.send(req);
         if(handler != null) {
             handler.handleResponse(res);
