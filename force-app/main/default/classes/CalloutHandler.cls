@@ -1,7 +1,7 @@
 public abstract class CalloutHandler {
     protected Integer timeout = 120000;
     protected String endpoint;
-    private CalloutResponseHandler handler;
+    protected CalloutResponseHandler handler;
 
     public CalloutHandler(String endpoint, CalloutResponseHandler handler) {
         this.endpoint = endpoint;

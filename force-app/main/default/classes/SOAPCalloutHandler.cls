@@ -25,6 +25,10 @@ public class SOAPCalloutHandler extends CalloutHandler {
             req.setHeader(key, header.get(key));
         }
         req.setBody(body);
-        return http.send(req);
+        res = http.send(req);
+        if(handler != null) {
+            handler.handleResponse(res);
+        }
+        return res;
     }
 }
