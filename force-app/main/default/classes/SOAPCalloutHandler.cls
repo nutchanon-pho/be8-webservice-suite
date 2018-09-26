@@ -17,7 +17,6 @@ public class SOAPCalloutHandler extends CalloutHandler {
         req.setTimeout(timeout);
         req.setEndpoint(endpoint);
         req.setHeader('Content-Type', 'text/xml;charset=utf-8');
-        req.setHeader('Content-Length', '' + body.length());
         req.setHeader('soapAction', soapAction);
         req.setHeader('Accept', 'text/xml');
         req.setMethod('POST');
@@ -28,6 +27,7 @@ public class SOAPCalloutHandler extends CalloutHandler {
         }
         if(body != null) {
             req.setBody(body);
+            req.setHeader('Content-Length', '' + body.length());
         }
         res = http.send(req);
         if(handler != null) {
