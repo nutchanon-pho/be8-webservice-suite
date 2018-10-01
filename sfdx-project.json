@@ -4,8 +4,8 @@
             "path": "force-app",
             "default": true,
             "package": "Beryl8 Web Service Suite",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionName": "ver 1.0",
+            "versionNumber": "1.0.0.NEXT"
         }
     ],
     "namespace": "",
@@ -13,6 +13,7 @@
     "sourceApiVersion": "43.0",
     "packageAliases": {
         "Beryl8 Web Service Suite": "0Ho6F000000XZPlSAO",
-        "Beryl8 Web Service Suite@0.1.0-1": "04t6F0000035PndQAE"
+        "Beryl8 Web Service Suite@0.1.0-1": "04t6F0000035PndQAE",
+        "Beryl8 Web Service Suite@1.0.0-1": "04t6F0000035Q06QAE"
     }
 }
