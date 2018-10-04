@@ -1,4 +1,4 @@
-public abstract class CalloutHandler {
+public abstract class CalloutHandler implements Calloutable {
     protected Integer timeout = 120000;
     protected String endpoint;
     protected CalloutResponseHandler handler;
@@ -11,6 +11,4 @@ public abstract class CalloutHandler {
     public void setTimeout(Integer timeout) {
         this.timeout = timeout;
     }
-
-    public abstract Object callout();
 }
