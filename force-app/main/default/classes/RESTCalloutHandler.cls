@@ -6,7 +6,7 @@ public class RESTCalloutHandler extends CalloutHandler {
     private String method;
     private String body;
 
-    public RESTCalloutHandler(String endpoint, CalloutResponseHandler handler, Map<String, String> header, String method, String body) {
+    public RESTCalloutHandler(String endpoint, ResponseHandleable handler, Map<String, String> header, String method, String body) {
         super(endpoint, handler);
         this.header = header;
         this.method = method;

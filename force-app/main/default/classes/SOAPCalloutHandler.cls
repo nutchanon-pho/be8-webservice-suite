@@ -3,7 +3,7 @@ public class SOAPCalloutHandler extends CalloutHandler {
     private String soapAction;
     private String body;
 
-    public SOAPCalloutHandler(String endpoint, CalloutResponseHandler handler, Map<String, String> header, String soapAction, String body) {
+    public SOAPCalloutHandler(String endpoint, ResponseHandleable handler, Map<String, String> header, String soapAction, String body) {
         super(endpoint, handler);
         this.header = header;
         this.soapAction = soapAction;

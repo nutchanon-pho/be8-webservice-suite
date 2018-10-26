@@ -1,9 +1,9 @@
 public abstract class CalloutHandler implements Calloutable {
     protected Integer timeout = 120000;
     protected String endpoint;
-    protected CalloutResponseHandler handler;
+    protected ResponseHandleable handler;
 
-    public CalloutHandler(String endpoint, CalloutResponseHandler handler) {
+    public CalloutHandler(String endpoint, ResponseHandleable handler) {
         this.endpoint = endpoint;
         this.handler = handler;
     }
