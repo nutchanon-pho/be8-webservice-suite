@@ -5,10 +5,13 @@ The motivation for this web service suite is to create a generic service that co
 
 # Design
 ### `CalloutHandler` Abstract Class
-A class called `CalloutHandler` is an abstract class with attributes of `endpoint`, `timeout` and `calloutResponseHandler`. These are the properties which should be required for any types of web service callouts. There is an abstract method `callout()` which will perform the callout depending on those web services whether it is REST or SOAP. The method is defined as abstract for the purpose of other classes to extend this abstract class and override the functionality of `callout()`.
+A class called `CalloutHandler` is an abstract class with attributes of `endpoint`, `timeout` and `calloutResponseHandler`. These are the properties which should be required for any types of web service callouts. `CalloutHandler` is designed to be an abstract class with the implementation of `Calloutable` interface. To implement a specific type of a callout handler, one must extend `CalloutHandler` abstract class which could be seen in `RESTCalloutHandler` as an example. For more insight please see 'Supported Web Service' section.
 
-### `CalloutResponseHandler` Abstract Class
-This abstract class is determined to be extended for the override of `handleResponse(Object response)` abstract method. The instances of these inherited class will be passed to the `CalloutHandler`. As a result, each `CalloutHandler` instance could have multiple ways of handling responses. The inherited classes will have the freedom to implement the handling of response from web service callouts. The method `handleResponse(Object response)` will be called after a complete web service callout.
+### `Calloutable` Interface
+This interface contains a method `callout()` which will perform the callout depending on those web services whether it is REST or SOAP. The class which implements this interface must specify the functionality of `callout()` to serve with the purposed type of web service. For example, `RESTCalloutHandler` implements the calling of REST web service inside `callout()` method.
+
+### `ResponseHandleable` Interface
+This interface is determined to be implemented for the implementation of `handleResponse(Object response)` method. The instances of these implemented class will be passed to the `CalloutHandler`. As a result, each `CalloutHandler` instance could have multiple ways of handling responses. The implemented classes will have the freedom to implement the handling of response from web service callouts. The method `handleResponse(Object response)` will be called after a complete web service callout.
 
 # Supported Web Service
 ### 1. REST
