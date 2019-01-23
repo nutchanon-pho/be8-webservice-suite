@@ -2,7 +2,7 @@
 
 # Installation
 Please go to 
-https://[YOUR-DOMAIN].lightning.force.com/packagingSetupUI/ipLanding.app?apvId=04t0o000001X6qGAAS
+(https://[YOUR-DOMAIN].lightning.force.com/packagingSetupUI/ipLanding.app?apvId=04t0o000001X6qGAAS)
 for installation.
 
 # Motivation
