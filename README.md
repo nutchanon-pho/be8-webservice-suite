@@ -1,5 +1,10 @@
 # BE8 Web Service Suite
 
+# Installation
+Please go to 
+https://[YOUR-DOMAIN].lightning.force.com/packagingSetupUI/ipLanding.app?apvId=04t0o000001X6qGAAS
+for installation.
+
 # Motivation
 The motivation for this web service suite is to create a generic service that could be utilize to perform web service callouts with lease dependencies and most reusability throughout any projects.
 
