@@ -6,7 +6,7 @@ general:
 #     only:
 #       - dev # specific branch
 #       - /dev-.*/ # or regexes
-jobs: 
+jobs:
   build:
     machine: true
     working_directory: ~/ci_app
@@ -51,7 +51,6 @@ jobs:
           command: |
             mkdir -p ./junit
             sfdx force:apex:test:run -u target --wait 33 --resultformat junit --codecoverage --testlevel RunLocalTests -d ./junit
-            bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
           environment:
             SFDX_IMPROVED_CODE_COVERAGE: true
       - store_artifacts:
@@ -59,7 +58,9 @@ jobs:
           path: ./junit
       - store_test_results:
           path: ./junit
-
+      - run:
+          name: Upload Code Coverage
+          command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
 ### Uncomment the following if performing deployments
 #deployment:
 #  override:
