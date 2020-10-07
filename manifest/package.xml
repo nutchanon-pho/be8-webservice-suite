@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <!-- READ ME: Please uncomment the metadata type you would like to use. -->
+  <!-- Please do not alter the order of the metadata type. This is for the ease of merging. -->
+  <!-- Every types of components should be present here. Please do not add anything new. -->
+  <!-- If what you are looking for is not here, pleaes contact the release manager. -->
+  <types>
+    <members>Calloutable</members>
+    <members>CalloutHandler</members>
+    <members>CalloutQueueable</members>
+    <members>CalloutQueueableTest</members>
+    <members>MockHTTPCallout</members>
+    <members>ResponseHandleable</members>
+    <members>RESTCalloutHandler</members>
+    <members>RESTCalloutHandlerTest</members>
+    <members>SampleCalloutResponseHandler</members>
+    <members>SOAPCalloutHandler</members>
+    <members>SOAPCalloutHandlerTest</members>
+    <name>ApexClass</name>
+  </types>
+  <version>49.0</version>
+</Package>
