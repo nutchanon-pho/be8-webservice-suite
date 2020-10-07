@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/nutchanon-pho/be8-webservice-suite.svg?style=svg)](https://circleci.com/gh/nutchanon-pho/be8-webservice-suite)
+[![codecov](https://codecov.io/gh/nutchanon-pho/be8-webservice-suite/branch/master/graph/badge.svg)](https://codecov.io/gh/nutchanon-pho/be8-webservice-suite)
 # BE8 Web Service Suite
 
 # Installation
