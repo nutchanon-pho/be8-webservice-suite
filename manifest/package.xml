@@ -5,7 +5,7 @@
   <!-- Every types of components should be present here. Please do not add anything new. -->
   <!-- If what you are looking for is not here, pleaes contact the release manager. -->
   <types>
-    <members>Calloutable</members>
+    <members>Calloutable</members> 
     <members>CalloutHandler</members>
     <members>CalloutQueueable</members>
     <members>CalloutQueueableTest</members>
