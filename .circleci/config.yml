@@ -6,6 +6,8 @@ general:
 #     only:
 #       - dev # specific branch
 #       - /dev-.*/ # or regexes
+orbs:
+  codecov: codecov/codecov@1.0.2
 jobs:
   build:
     machine: true
